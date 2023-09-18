@@ -1,0 +1,23 @@
+﻿@*Harry Byrd*@
+@model Unit1ProjectModel
+@{
+    ViewBag.Title = "Unit Project 1";
+}
+<h1>Unit Project 1</h1>
+<form asp-action="Index" method="post">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="NumberInput">Choose a number between 0 and 9:</label>
+        <input asp-for="NumberInput" />
+    </div>
+    <div>
+        <label asp-for="LetterInput">Enter a letter between A and J:</label>
+        <input asp-for="LetterInput" />
+    </div>
+    <div>
+        <label>Meme Name:</label>
+        <input value="@ViewBag.U1P" readonly>
+    </div>
+    <button type="submit">Generate</button>
+    <button asp-action="Index">Clear</button>
+</form>
